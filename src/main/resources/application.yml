@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: SockKeeper
+
+  liquibase:
+    change-log: classpath:db/changelog/changelogs.xml
+    enabled: true
+    liquibase-schema: public
+    database-change-log-lock-table: databasechangeloglock
+    database-change-log-table: databasechangelog
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/socks_inventory
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
